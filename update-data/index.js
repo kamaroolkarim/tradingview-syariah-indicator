@@ -1,9 +1,9 @@
-import fs from 'fs'
-import ExcelJS from 'exceljs'
-import git from 'simple-git'
-import merge from 'lodash.merge'
-import playWright from 'playwright'
-import cliProgress from 'cli-progress'
+const fs = require('fs')
+const ExcelJS = require('exceljs')
+const git = require('simple-git')
+const merge = require('lodash.merge')
+const playWright = require('playwright')
+const cliProgress = require('cli-progress')
 
 const TRADING_VIEW_MYR = 'MYX'
 const STOCK_LIST_FILENAME = 'stock-list.json'

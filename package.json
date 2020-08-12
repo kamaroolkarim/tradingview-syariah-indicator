@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "name": "tradingview-syariah-indicator",
   "version": "1.4.3",
   "description": "Display small shariah indicator to stock list in tradingview(MY)",
@@ -8,11 +7,22 @@
     "start": "web-ext run --start-url https://tradingview.com/symbols/MYX-k1/",
     "start:chrome": "web-ext run --target chromium --start-url https://tradingview.com/symbols/MYX-k1/",
     "build": "web-ext build --overwrite-dest --ignore-files update-data docs *.md package.json package-lock.json stock-list.json",
-    "update": "node update-data"
+    "update-data": "node update-data",
+    "build:prod": "rm -rf release; webpack --mode production",
+    "a": "",
+    "build2": "rm -rf build && webpack --mode development --progress --hide-modules",
+    "watch": "npm run build2 -- --watch",
+    "build:prod2": "rm -rf release/build && webpack --mode production --progress --hide-modules",
+    "release": "rm -rf release && npm run build:prod && npm run zip",
+    "zip": "cd release/build && zip -r ../sync-tab-groups.zip * && cp ../sync-tab-groups.zip ../sync-tab-groups.xpi && cd ../../",
+    "clean": "rm -rf build release",
+    "lint": "npx eslint extension --quiet",
+    "firefox:prod": "npx web-ext run --sourceDir=release/build",
+    "firefox:dev": "npx web-ext run --sourceDir=build"
   },
   "engines": {
-    "node": "13.14.0",
-    "npm": "6.13.4"
+    "node": "12.18.3",
+    "npm": "6.14.6"
   },
   "keywords": [
     "Syariah Stock in Malaysia",
@@ -23,13 +33,28 @@
   "author": "Azriz Haziq <azrizhaziq@gmail.com> (https://azrizhaziq.github.io/portfolio)",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@ianwalter/web-ext-webpack-plugin": "^0.1.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
     "cli-progress": "^3.6.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "css-loader": "^4.2.1",
+    "cssnano": "^4.1.10",
     "eslint": "^6.8.0",
     "exceljs": "^4.1.1",
+    "html-minifier-webpack-plugin": "^2.2.3",
     "lodash.merge": "^4.6.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "playwright": "^0.11.1",
     "simple-git": "^1.132.0",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^4.1.0",
     "web-ext": "^5.0.0",
-    "webextension-polyfill": "^0.6.0"
+    "webextension-polyfill": "^0.6.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.1.1"
   }
 }
