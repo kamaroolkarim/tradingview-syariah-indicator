@@ -9,6 +9,7 @@ const terserConfig = {
   compress: true,
   mangle: true
 }
+
 const htmlMinifierConfig = [
   'collapseWhitespace',
   'collapseBooleanAttributes',
@@ -60,10 +61,10 @@ function copyFolders(folderPaths) {
   for (let path of folderPaths) {
     ncp(path, `${ outputPath }/${ path }`, function (err) {
       if (err) {
-        return console.error(err);
+        return console.error(err)
       }
-      console.log('done!');
-    });
+      console.log('done!')
+    })
   }
 }
 
