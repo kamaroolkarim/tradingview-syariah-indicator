@@ -1,4 +1,5 @@
 /* global tsi */
+import { tsi } from './../helper.js';
 
 // get all data-i18n and write to textContent
 Array.from(document.querySelectorAll('[data-i18n]')).forEach(item =>

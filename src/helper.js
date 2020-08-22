@@ -1,6 +1,7 @@
 /* exported tsi */
+import './browser-polyfill.js';
 
-const tsi = (function () {
+export const tsi = (function () {
   'use strict'
   const parser = new DOMParser()
   const TRADING_VIEW_MYR = 'MYX'

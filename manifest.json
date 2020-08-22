@@ -7,43 +7,19 @@
   "description": "__MSG_ext_extension_description__",
   "homepage_url": "https://github.com/AzrizHaziq/tradingview-syariah-indicator",
   "background": {
-    "scripts": [
-      "src/browser-polyfill.js",
-      "src/helper.js",
-      "src/bg.js"
-    ],
+    "page": "src/bg/bg.html",
     "persistent": true
   },
   "content_scripts": [
     {
       "matches": [
-        "*://*.tradingview.com/chart/*"
-      ],
-      "js": [
-        "src/browser-polyfill.js",
-        "src/helper.js",
-        "src/page/chart.js",
-        "src/page/screener.js"
-      ]
-    },
-    {
-      "matches": [
-        "*://*.tradingview.com/screener/*"
-      ],
-      "js": [
-        "src/browser-polyfill.js",
-        "src/helper.js",
-        "src/page/screener.js"
-      ]
-    },
-    {
-      "matches": [
+        "*://*.tradingview.com/chart/*",
+        "*://*.tradingview.com/screener/*",
         "*://*.tradingview.com/symbols/*"
       ],
       "js": [
         "src/browser-polyfill.js",
-        "src/helper.js",
-        "src/page/symbols.js"
+        "src/page/main.js"
       ]
     }
   ],
@@ -52,6 +28,11 @@
     "storage",
     "webNavigation",
     "*://*.tradingview.com/*"
+  ],
+  "web_accessible_resources": [
+    "src/browser-polyfill.js",
+    "src/helper.js",
+    "src/**/*.js"
   ],
   "icons": {
     "16": "./assets/shariah-icon-16.png",

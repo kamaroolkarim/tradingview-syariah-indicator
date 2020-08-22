@@ -1,4 +1,6 @@
-/* global tsi */
+import './../browser-polyfill.js';
+import { tsi } from './../helper.js';
+
 tsi.addStaticSyariahIcon()
 tsi.retryFn()(observeSymbolChanges)
 browser.runtime.onMessage.addListener(symbolScript)

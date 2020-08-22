@@ -1,4 +1,6 @@
 /* global tsi */
+import { tsi } from './../helper.js';
+
 browser.tabs.onUpdated.addListener(tsi.debounce(listener, 500, true))
 
 const fetchData = async() => {
