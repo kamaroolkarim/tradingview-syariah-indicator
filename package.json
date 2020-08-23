@@ -8,9 +8,9 @@
     "start:chrome": "web-ext run --target chromium --start-url https://tradingview.com/symbols/MYX-k1/",
     "update-data": "node update-data",
     "pre:build": "node prod_script.js",
-    "build": "web-ext build --source-dir \"dist\" --overwrite-dest",
-    "firefox:prod": "npx web-ext run --sourceDir=release/build",
-    "firefox:dev": "npx web-ext run --sourceDir=build"
+    "build": "web-ext build --source-dir 'dist' --overwrite-dest",
+    "ff:prod": "npm run pre:build && web-ext run --source-dir 'dist' --target chromium --start-url https://tradingview.com/symbols/MYX-k1/",
+    "c:prod": "npm run pre:build && web-ext run --source-dir 'dist' --target chromium --start-url https://tradingview.com/symbols/MYX-k1/"
   },
   "engines": {
     "node": "12.18.3",

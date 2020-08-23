@@ -6,8 +6,9 @@ const { minify: htmlMinifier } = require('html-minifier')
 
 const outputPath = './dist'
 const terserConfig = {
-  compress: true,
-  mangle: true
+  ecma: 6,
+  mangle: true,
+  compress: true
 }
 
 const htmlMinifierConfig = [

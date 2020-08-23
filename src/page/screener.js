@@ -1,6 +1,6 @@
 /* global tsi */
-import './../browser-polyfill.js';
-import { tsi } from './../helper.js';
+import './../browser-polyfill.js'
+import { tsi } from './../helper.js'
 
 let SHARIAH_MSC_LIST = {}
 const ONLY_VALID_COUNTRIES = ['my']
