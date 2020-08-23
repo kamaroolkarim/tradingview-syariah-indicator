@@ -1,7 +1,7 @@
 {
   "mscAt": "31 Dec 2019",
   "mscLink": "https://www.bursamalaysia.com/sites/5d809dcf39fba22790cad230/assets/5e1598515b711a666348f0e8/Mid_Small_Cap_PLCs__Mkt_cap_of_200_mil_to_2_bil__Dec2019_V3.0.pdf",
-  "updateAt": "2020-08-09T02:27:12.482Z",
+  "updateAt": "2020-08-23T03:01:03.483Z",
   "list": {
     "MYX:3A": {
       "s": 1,
@@ -27,6 +27,9 @@
       "s": 1
     },
     "MYX:ACOSTEC": {
+      "s": 1
+    },
+    "MYX:ACOSTEC-WA": {
       "s": 1
     },
     "MYX:ADVCON": {
@@ -625,15 +628,6 @@
     "MYX:DUFU": {
       "s": 1,
       "msc": 1
-    },
-    "MYX:DWL": {
-      "s": 1
-    },
-    "MYX:DWL-PA": {
-      "s": 1
-    },
-    "MYX:DWL-WA": {
-      "s": 1
     },
     "MYX:E&O": {
       "s": 1,
@@ -1365,6 +1359,15 @@
     "MYX:KTB": {
       "s": 1
     },
+    "MYX:KTG": {
+      "s": 1
+    },
+    "MYX:KTG-PA": {
+      "s": 1
+    },
+    "MYX:KTG-WA": {
+      "s": 1
+    },
     "MYX:KUB": {
       "s": 1
     },
@@ -1993,6 +1996,9 @@
       "msc": 1
     },
     "MYX:PERMAJU": {
+      "s": 1
+    },
+    "MYX:PERMAJU-WA": {
       "s": 1
     },
     "MYX:PERSTIM": {
